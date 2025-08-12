@@ -19,7 +19,8 @@ def load_model():
 # Load your dataset
 @st.cache_data
 def load_data():
-    return pd.read_csv("data\house_price.csv")  # change filename if needed
+    return pd.read_csv("data/house_price.csv")
+  # change filename if needed
 
 model = load_model()
 data = load_data()
@@ -124,7 +125,8 @@ elif selection == "📉 Model Performance":
     st.write("Evaluation metrics on test data.")
 
     # Assuming you have test data stored
-    test_data = pd.read_csv("data\house_price.csv")  # change if needed
+    test_data = pd.read_csv("data/house_price.csv")
+  # change if needed
     X_test = test_data.drop(columns=["Price"])
     y_test = test_data["Price"]
 
